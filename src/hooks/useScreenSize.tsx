@@ -1,7 +1,12 @@
 import { useEffect, useState } from "react";
 
-const useScreenSize = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 694);
+interface ScreenSizeInterface {
+  isMobile: boolean;
+  isWeb: boolean;
+}
+
+const useScreenSize = (): ScreenSizeInterface => {
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 694);
 
   const handleResize = () => {
     setIsMobile(window.innerWidth < 694);
