@@ -11,6 +11,7 @@ const useScreenSize = (): ScreenSizeInterface => {
   const handleResize = () => {
     setIsMobile(window.innerWidth < 694);
   };
+  
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     handleResize();
