@@ -1,4 +1,4 @@
-import { Header } from "../organisms/header/header";
+import { Header } from "../../organisms/header/header";
 
 export const DefaultTemplate = () => {
   return (
