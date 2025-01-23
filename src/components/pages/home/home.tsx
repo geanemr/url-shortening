@@ -1,4 +1,4 @@
-import { DefaultTemplate } from "../templates/defaultTemplate";
+import { DefaultTemplate } from "../../templates/defaultTemplate/defaultTemplate";
 
 const Home = () => {
   return (
