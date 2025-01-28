@@ -23,7 +23,7 @@ export const Button = ({
       onClick={onClick}
       className={twMerge(
         variantClasses[variant],
-        "py-2 px-4 cursor-pointer font-poppins font-bold"
+        "py-2 px-4 cursor-pointer font-poppins font-bold w-fit"
       )}
     >
       {children}
