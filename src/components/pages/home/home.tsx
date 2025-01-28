@@ -1,8 +1,8 @@
-import { DefaultTemplate } from "../../templates/defaultTemplate/defaultTemplate";
+import DefaultTemplate from "../../templates/defaultTemplate/defaultTemplate";
 
 const Home = () => {
   return (
-    <div>
+    <div className="lg:mx-40 lg:my-10">
       <DefaultTemplate />
     </div>
   );
