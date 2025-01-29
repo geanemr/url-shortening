@@ -1,7 +1,7 @@
 import Button from "../../atoms/button/button";
 import { Image } from "../../atoms/image/image";
 
-const MainContainer = () => {
+const HeroSection = () => {
   return (
     <div className="flex flex-col lg:flex-row-reverse  lg:gap-2 justify-center mt-2 p-6 lg:p-0">
       <section className="flex flex-1 justify-center lg:justify-end">
@@ -19,4 +19,4 @@ const MainContainer = () => {
   );
 };
 
-export default MainContainer;
+export default HeroSection;
