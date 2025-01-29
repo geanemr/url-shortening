@@ -16,6 +16,7 @@ export default {
           grayishViolet: "hsl(257, 7%, 63%)",
           veryDarkBlue: "hsl(255, 11%, 22%)",
           veryDarkViolet: "hsl(260, 8%, 14%)",
+          aquamarine: "hsl(160, 100%, 75%)"
         },
       },
       fontSize: {
@@ -24,6 +25,10 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      backgroundImage: {
+        "inputMobile": "url('/bg-shorten-mobile.svg')",
+        "inputDesktop": "url('/bg-shorten-desktop.svg')",
+      }
     },
   },
   plugins: [],
