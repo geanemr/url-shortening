@@ -4,7 +4,7 @@ import LoginButtons from "../../molecules/loginButtons/loginButtons";
 
 const MenuDesktop: React.FC = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center md:justify-between h-fit p-2">
+    <section className="flex flex-wrap items-center justify-center md:justify-between h-fit p-2">
       <InfoButtons />
       <LoginButtons />
     </section>
