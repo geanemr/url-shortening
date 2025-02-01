@@ -1,5 +1,5 @@
 import useScreenSize from "../../../hooks/useScreenSize";
-import InputContainer from "../../molecules/inputContainer/inputContainer";
+import Form from "../../molecules/form/form";
 import HeroSection from "../../organisms/heroSection/heroSection";
 import MenuDesktop from "../../organisms/menu/menuDesktop";
 import MenuMobile from "../../organisms/menu/menuMobile";
@@ -11,7 +11,7 @@ const DefaultTemplate = () => {
       {isMobile ? <MenuMobile /> : <MenuDesktop />}
       <section>
         <HeroSection />
-        <InputContainer />
+        <Form />
       </section>
     </div>
   );
