@@ -3,7 +3,6 @@ import { twMerge } from "tailwind-merge";
 
 export interface ButtonProps {
   children: ReactNode;
-  onClick?: () => void;
   variant?: "gray" | "rounded-cyan" | "square-cyan";
   className?:string;
 }
@@ -16,13 +15,11 @@ const variantClasses = {
 
 export const Button = ({
   children,
-  onClick,
   variant = "gray",
   className,
 }: ButtonProps) => {
   return (
     <button
-      onClick={onClick}
       className={twMerge(
         variantClasses[variant],className,
         "cursor-pointer font-poppins font-bold w-fit"
