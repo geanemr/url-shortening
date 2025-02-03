@@ -22,11 +22,7 @@ export const useFetch = (): useFetchInterface => {
       body: JSON.stringify({ url: url }),
     })
       .then((response) => response.json())
-      .then((json) => {
-        console.log(json.result_url);
-        
-        setShortenUrl(json.result_url)
-      })
+      .then((json) => setShortenUrl(json.result_url))
       .catch((error) => setError(error));
   };
 
