@@ -1,5 +1,6 @@
 import useScreenSize from "../../../hooks/useScreenSize";
 import Form from "../../molecules/form/form";
+import UrlsList from "../../molecules/urlsList/urlList";
 import HeroSection from "../../organisms/heroSection/heroSection";
 import MenuDesktop from "../../organisms/menu/menuDesktop";
 import MenuMobile from "../../organisms/menu/menuMobile";
@@ -12,6 +13,7 @@ const DefaultTemplate = () => {
       <section>
         <HeroSection />
         <Form />
+        <UrlsList />
       </section>
     </div>
   );
