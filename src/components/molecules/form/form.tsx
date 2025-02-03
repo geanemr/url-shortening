@@ -9,6 +9,7 @@ const Form = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     fetchShortenUrl();
+    setUrl("");
   };
 
   return (
