@@ -2,13 +2,31 @@ import Input from "../../atoms/input/input";
 import Button from "../../atoms/button/button";
 import React from "react";
 import { useFetch } from "../../../hooks/useFetch";
+import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 const Form = () => {
-  const { fetchShortenUrl, url, setUrl } = useFetch();
+  const { fetchShortenUrl, url, setUrl, shortenUrl } = useFetch();
+  const { setItem, getItem } = useLocalStorage();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     fetchShortenUrl();
+    if (!shortenUrl) return;
+
+    const storedUrls =
+      getItem<{ id: string; url: string }[]>("shortenUrls") || [];
+    const lastId =
+      storedUrls.length > 0 ? Number(storedUrls[storedUrls.length - 1].id) : 0;
+    const newId = lastId + 1;
+
+    const newUrl = {
+      id: newId,
+      url: shortenUrl,
+    };
+    const updatedUrls = [...storedUrls, newUrl];
+
+    setItem("shortenUrls", updatedUrls);
+    setUrl("");
   };
 
   return (
