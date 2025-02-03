@@ -1,34 +1,20 @@
 import Input from "../../atoms/input/input";
 import Button from "../../atoms/button/button";
-import React, { useState } from "react";
+import React from "react";
 import { useFetch } from "../../../hooks/useFetch";
-import { useLocalStorage } from "../../../hooks/useLocalStorage";
-import { UrlItem, UrlList } from "../../../types/url";
+import { useUrlStore } from "../../../stores/urlStore";
 
 const Form = () => {
   const { fetchShortenUrl, url, setUrl, shortenUrl } = useFetch();
-  const { setItem, getItem } = useLocalStorage();
-  const [showUrl, setShowUrl] = useState<UrlList>();
+  const { addUrl } = useUrlStore();
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     fetchShortenUrl();
     if (!shortenUrl) return;
 
-    const storedUrls = getItem<UrlList>("shortenUrls") || [];
-    const lastId =
-      storedUrls.length > 0 ? Number(storedUrls[storedUrls.length - 1].id) : 0;
-    const newId = lastId + 1;
+    addUrl(shortenUrl);
 
-    const newUrl = {
-      id: newId,
-      url: shortenUrl,
-    };
-    const updatedUrls = [...storedUrls, newUrl];
-
-    setItem("shortenUrls", updatedUrls);
-    const sortedUrls = updatedUrls.sort((a, b) => Number(b.id) - Number(a.id));
-    setShowUrl(sortedUrls as UrlList);
     setUrl("");
   };
 
@@ -51,17 +37,6 @@ const Form = () => {
           Shorten It!
         </Button>
       </form>
-      {showUrl ? (
-        <ul>
-          {showUrl.map((url: UrlItem) => (
-            <li key={url.id}>
-              <span>
-                {url.url} - {url.id}
-              </span>
-            </li>
-          ))}
-        </ul>
-      ) : null}
     </>
   );
 };
