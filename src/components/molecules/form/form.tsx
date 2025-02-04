@@ -13,7 +13,7 @@ const Form = () => {
     fetchShortenUrl();
     if (!shortenUrl) return;
 
-    addUrl(shortenUrl);
+    addUrl(url, shortenUrl);
 
     setUrl("");
   };
