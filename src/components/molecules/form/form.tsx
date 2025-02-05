@@ -12,10 +12,10 @@ const Form = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
-    if (url !== "") {
+    if (url) {
       setEmptyLink(false);
     }
-    if (url === "") {
+    if (!url) {
       setEmptyLink(true);
       return;
     }
@@ -31,25 +31,30 @@ const Form = () => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-wrap items-center m-2 lg:m-0 p-8 lg:p-12 bg-no-repeat bg-right-top bg-primary-darkViolet bg-inputMobile lg:bg-inputDesktop rounded-md gap-4 mb-6 mt-2"
+        className="flex flex-col relative m-2 lg:m-0 p-8 lg:p-12 bg-no-repeat bg-right-top bg-primary-darkViolet bg-inputMobile lg:bg-inputDesktop rounded-md mb-6 mt-2 font-poppins"
       >
-        <Input
-          placeholder="Shorten a link here..."
-          className={twMerge(
-            "w-full md:w-auto truncate flex-grow p-3",
-            emptyLink && "border-2 border-secondary-red"
-          )}
-          value={url}
-          onChange={(e) => setUrl(e.target.value)}
-        />
-        <Button
-          variant="square-cyan"
-          className="w-full md:w-auto truncate lg:break-normal flex-grow lg:flex-grow-0 p-3 lg:px-10"
-        >
-          Shorten It!
-        </Button>
+        <div className="flex flex-wrap items-center gap-4 justify-center">
+          <Input
+            placeholder="Shorten a link here..."
+            className={twMerge(
+              "w-full md:w-auto truncate flex-grow p-3",
+              emptyLink && "border-2 border-secondary-red"
+            )}
+            value={url}
+            onChange={(e) => {
+              setUrl(e.target.value);
+              setEmptyLink(false);
+            }}
+          />
+          <Button
+            variant="square-cyan"
+            className="w-full md:w-auto truncate lg:break-normal flex-grow lg:flex-grow-0 p-3 lg:px-10"
+          >
+            Shorten It!
+          </Button>
+        </div>
         {emptyLink ? (
-          <span className="text-secondary-red justify-center">
+          <span className="mt-2 text-secondary-red md:text-left font-medium text-sm">
             Please add a link
           </span>
         ) : null}
