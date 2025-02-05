@@ -1,14 +1,17 @@
 import { useState } from "react";
 import { useUrlStore } from "../../../stores/urlStore";
 import Button from "../../atoms/button/button";
+import { useCopy } from "../../../hooks/useCopy";
 
 const UrlsList = () => {
   const { urls } = useUrlStore();
   const sortedUrls = urls.sort((a, b) => Number(b.id) - Number(a.id));
-  const [copy, setCopy] = useState(false);
+  const { handleCopy } = useCopy();
+  const [copiedId, setCopiedId] = useState<number | null>(null);
 
-  const handleClick = () => {
-    setCopy(true);
+  const handleClick = (id: number, shortenUrl: string) => {
+    handleCopy(shortenUrl);
+    setCopiedId(id);
   };
 
   return (
@@ -24,26 +27,17 @@ const UrlsList = () => {
                   {url.originalUrl}
                 </span>
                 <div className="flex flex-col md:flex-row items-center md:ml-auto gap-2">
-                <span className=" text-primary-cyan font-semibold break-all my-2">
-                  {url.shortenUrl}
-                </span>
-                {!copy ? (
+                  <span className=" text-primary-cyan font-semibold break-all my-2">
+                    {url.shortenUrl}
+                  </span>
                   <Button
                     variant="square-cyan"
                     className="md:py-1 px-5 text-xs"
-                    onClick={handleClick}
+                    onClick={() => handleClick(url.id, url.shortenUrl)}
+                    disabled={copiedId === url.id}
                   >
-                    Copy
+                    {copiedId !== url.id ? "Copy" : "Copied!"}
                   </Button>
-                ) : (
-                  <Button
-                    variant="square-cyan"
-                    className="md:py-1 px-5 text-xs"
-                    disabled={copy}
-                  >
-                    Copied!
-                  </Button>
-                )}
                 </div>
               </li>
             ))
