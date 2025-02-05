@@ -4,7 +4,7 @@ import { UrlList, UrlItem } from "../types/url";
 
 interface UrlState {
   urls: UrlList;
-  addUrl: (shortenUrl: string) => void;
+  addUrl: (originalUrl: string, shortenUrl: string) => void;
 }
 
 export const useUrlStore = create<UrlState>()(
@@ -12,14 +12,15 @@ export const useUrlStore = create<UrlState>()(
     (set) => ({
       urls: [],
 
-      addUrl: (shortenUrl) =>
+      addUrl: (originalUrl, shortenUrl) =>
         set((state) => {
-          const newUrl: UrlItem = {
-            id: (state.urls.length + 1).toString(),
-            url: shortenUrl,
+          const urlData: UrlItem = {
+            id: state.urls.length + 1,
+            originalUrl: originalUrl,
+            shortenUrl: shortenUrl,
           };
 
-          return { urls: [...state.urls, newUrl] };
+          return { urls: [...state.urls, urlData] };
         }),
     }),
     { name: "url-storage" }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../atoms/button/button";
+import Button from "../../atoms/button/button";
 
 const LoginButtons: React.FC = () => {
   return (

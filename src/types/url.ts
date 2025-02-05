@@ -1,6 +1,7 @@
 export interface UrlItem {
-  id: string;
-  url: string;
+  id: number;
+  originalUrl: string;
+  shortenUrl: string;
 }
 
 export type UrlList = UrlItem[];
