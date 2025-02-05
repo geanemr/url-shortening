@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../../atoms/button/button";
+import  Button  from "../../atoms/button/button";
 import { Image } from "../../atoms/image/image";
 import useScreenSize from "../../../hooks/useScreenSize";
 
