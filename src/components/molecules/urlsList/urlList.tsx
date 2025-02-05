@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useUrlStore } from "../../../stores/urlStore";
 import Button from "../../atoms/button/button";
 import { useCopy } from "../../../hooks/useCopy";
+import { twMerge } from "tailwind-merge";
 
 const UrlsList = () => {
   const { urls } = useUrlStore();
@@ -32,7 +33,7 @@ const UrlsList = () => {
                   </span>
                   <Button
                     variant="square-cyan"
-                    className="md:py-1 px-5 text-xs"
+                    className={twMerge("md:py-1 px-5 text-xs min-w-24 min-h-10 md:min-w-28", copiedId === url.id && "bg-neutral-veryDarkBlue border-none")}
                     onClick={() => handleClick(url.id, url.shortenUrl)}
                     disabled={copiedId === url.id}
                   >

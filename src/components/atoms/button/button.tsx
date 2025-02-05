@@ -17,7 +17,7 @@ const variantClasses = {
       className={twMerge(
         variantClasses[variant],
         className,
-        "cursor-pointer font-poppins font-bold w-fit disabled:bg-neutral-aquamarine disabled:border-none"
+        "cursor-pointer font-poppins font-bold w-fit"
       )}
       {...props}
     >
