@@ -6,7 +6,7 @@ import { useUrlStore } from "../../../stores/urlStore";
 import { twMerge } from "tailwind-merge";
 
 const Form = () => {
-  const { fetchShortenUrl, url, setUrl, shortenUrl } = useFetch();
+  const { fetchShortenUrl, url, setUrl, shortenUrl, error } = useFetch();
   const { addUrl } = useUrlStore();
   const [emptyLink, setEmptyLink] = useState(false);
 
@@ -53,11 +53,16 @@ const Form = () => {
             Shorten It!
           </Button>
         </div>
-        {emptyLink ? (
+        {emptyLink && (
           <span className="mt-2 text-secondary-red md:text-left font-medium text-sm">
             Please add a link
           </span>
-        ) : null}
+        )}
+        {error && (
+          <span className="mt-2 text-secondary-red md:text-left font-medium text-sm">
+            {error}
+          </span>
+        )}
       </form>
     </>
   );
