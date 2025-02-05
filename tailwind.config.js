@@ -7,6 +7,7 @@ export default {
         primary: {
           cyan: "hsl(180, 66%, 49%)",
           darkViolet: "hsl(257, 27%, 26%)",
+          darkCyan: "hsl(180, 66%, 45%)",
         },
         secondary: {
           red: "hsl(0, 87%, 67%)",
