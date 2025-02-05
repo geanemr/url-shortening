@@ -1,5 +1,5 @@
 export interface UrlItem {
-  id: string;
+  id: number;
   originalUrl: string;
   shortenUrl: string;
 }

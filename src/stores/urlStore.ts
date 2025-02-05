@@ -15,7 +15,7 @@ export const useUrlStore = create<UrlState>()(
       addUrl: (originalUrl, shortenUrl) =>
         set((state) => {
           const urlData: UrlItem = {
-            id: (state.urls.length + 1).toString(),
+            id: state.urls.length + 1,
             originalUrl: originalUrl,
             shortenUrl: shortenUrl,
           };
