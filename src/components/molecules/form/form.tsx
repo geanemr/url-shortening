@@ -1,15 +1,24 @@
 import Input from "../../atoms/input/input";
 import Button from "../../atoms/button/button";
-import React from "react";
+import React, { useState } from "react";
 import { useFetch } from "../../../hooks/useFetch";
 import { useUrlStore } from "../../../stores/urlStore";
+import { twMerge } from "tailwind-merge";
 
 const Form = () => {
   const { fetchShortenUrl, url, setUrl, shortenUrl } = useFetch();
   const { addUrl } = useUrlStore();
+  const [emptyLink, setEmptyLink] = useState(false);
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    if (url !== "") {
+      setEmptyLink(false);
+    }
+    if (url === "") {
+      setEmptyLink(true);
+      return;
+    }
     fetchShortenUrl();
     if (!shortenUrl) return;
 
@@ -26,7 +35,10 @@ const Form = () => {
       >
         <Input
           placeholder="Shorten a link here..."
-          className="w-full md:w-auto truncate flex-grow p-3"
+          className={twMerge(
+            "w-full md:w-auto truncate flex-grow p-3",
+            emptyLink && "border-2 border-secondary-red"
+          )}
           value={url}
           onChange={(e) => setUrl(e.target.value)}
         />
@@ -36,6 +48,11 @@ const Form = () => {
         >
           Shorten It!
         </Button>
+        {emptyLink ? (
+          <span className="text-secondary-red justify-center">
+            Please add a link
+          </span>
+        ) : null}
       </form>
     </>
   );
