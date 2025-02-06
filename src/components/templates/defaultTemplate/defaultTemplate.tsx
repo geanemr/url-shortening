@@ -1,9 +1,11 @@
 import useScreenSize from "../../../hooks/useScreenSize";
 import Form from "../../molecules/form/form";
+import GetStarted from "../../molecules/getStarted/getStarted";
 import UrlsList from "../../molecules/urlsList/urlList";
 import HeroSection from "../../organisms/heroSection/heroSection";
 import MenuDesktop from "../../organisms/menu/menuDesktop";
 import MenuMobile from "../../organisms/menu/menuMobile";
+import Statistics from "../../organisms/statistics/statistics";
 
 const DefaultTemplate = () => {
   const { isMobile } = useScreenSize();
@@ -14,6 +16,8 @@ const DefaultTemplate = () => {
         <HeroSection />
         <Form />
         <UrlsList />
+        <Statistics />
+        <GetStarted />
       </section>
     </div>
   );
