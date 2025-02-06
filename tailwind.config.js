@@ -29,6 +29,8 @@ export default {
       backgroundImage: {
         "inputMobile": "url('/bg-shorten-mobile.svg')",
         "inputDesktop": "url('/bg-shorten-desktop.svg')",
+        "boostMobile":  "url('/bg-boost-mobile.svg')",
+        "boostDesktop": "url('/bg-boost-desktop.svg')",
       }
     },
   },
