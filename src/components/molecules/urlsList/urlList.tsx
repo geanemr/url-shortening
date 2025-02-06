@@ -24,7 +24,7 @@ const UrlsList = () => {
                 key={url.id}
                 className="flex items-center py-4 flex-col md:flex-row md:gap-6 md:px-10"
               >
-                <span className="break-all text-neutral-veryDarkBlue text-lg">
+                <span className="break-all text-neutral-veryDarkBlue text-lg font-medium">
                   {url.originalUrl}
                 </span>
                 <div className="flex flex-col md:flex-row items-center md:ml-auto gap-2">
