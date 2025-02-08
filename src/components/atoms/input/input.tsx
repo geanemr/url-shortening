@@ -10,7 +10,7 @@ const Input: React.FC<InputHTMLAttributes<HTMLInputElement>> = ({
   return (
     <input
       placeholder={placeholder}
-      className={twMerge("placeholder-neutral-gray font-poppins rounded", className)}
+      className={twMerge("placeholder-neutral-gray rounded", className)}
       value={value}
       onChange={onChange}
     />

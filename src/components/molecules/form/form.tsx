@@ -31,7 +31,7 @@ const Form = () => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col relative m-2 lg:m-0 p-8 lg:p-12 bg-no-repeat bg-right-top bg-primary-darkViolet bg-inputMobile lg:bg-inputDesktop rounded-md mb-6 mt-2 font-poppins"
+        className="flex flex-col relative m-2 lg:m-0 p-8 lg:p-12 bg-no-repeat bg-right-top bg-primary-darkViolet bg-inputMobile lg:bg-inputDesktop rounded-md mb-6 mt-2"
       >
         <div className="flex flex-wrap items-center gap-4 justify-center">
           <Input

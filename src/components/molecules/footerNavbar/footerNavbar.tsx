@@ -6,7 +6,7 @@ const FooterNavbar: React.FC = () => {
   const options = "hover:text-primary-cyan cursor-pointer text-neutral-grayishViolet ";
 
   return (
-    <nav className="flex flex-col md:flex-row gap-8 text-white font-poppins justify-center">
+    <nav className="flex flex-col md:flex-row gap-8 text-white justify-center">
       <section className={sections}>
         <strong className="mb-2">Features</strong>
         <span className={options}>Link Shortening</span>
