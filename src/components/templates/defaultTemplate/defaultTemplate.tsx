@@ -12,7 +12,7 @@ const DefaultTemplate = () => {
   const { isWeb } = useScreenSize();
   return (
     <div>
-      <div className="flex flex-col md:p-10 text-center lg:mx-28 lg-desktop:mx-56">
+      <div className="flex flex-col md:p-10 text-center lg:mx-28 lg-desktop:mx-56 font-poppins">
         {isWeb ? <MenuDesktop /> : <MenuMobile />}
         <HeroSection />
         <Form />

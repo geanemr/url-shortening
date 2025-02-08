@@ -16,7 +16,7 @@ const UrlsList = () => {
   };
 
   return (
-    <section className="flex font-poppins">
+    <section className="flex">
       <ul className="flex flex-col w-full">
         {sortedUrls.length > 0
           ? sortedUrls.map((url) => (

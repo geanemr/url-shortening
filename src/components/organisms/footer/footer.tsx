@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="flex flex-col justify-center  md:flex-row bg-neutral-veryDarkBlue p-10">
       <section className="flex justify-center flex-1">
-      <h1 className="text-white text-3xl font-bold font-poppins  mb-8 md:mb-0">
+      <h1 className="text-white text-3xl font-bold mb-8 md:mb-0">
         Shortly
       </h1>
       </section>
