@@ -4,16 +4,16 @@ import { twMerge } from "tailwind-merge";
 
 const Statistics: React.FC = () => {
   const h1 =
-    "text-3xl lg:text-base font-semibold text-neutral-veryDarkBlue my-4 break-all";
-  const h2 = "text-base lg:text-sm text-neutral-grayishViolet break-words";
+    "text-xl font-bold text-neutral-veryDarkBlue my-4 break-all";
+  const h2 = "text-base lg:text-lg text-neutral-grayishViolet break-words font-medium text-base";
   const images = "justify-self-center p-4";
   const imageContainers = "rounded-full  bg-primary-darkViolet h-20 w-20";
   const sections = "flex flex-col items-center justify-center";
   const dividers =
-    "bg-primary-cyan h-12 w-2 border border-primary-darkCyan md:-rotate-90 md:h-6";
+    "bg-primary-cyan h-12 w-2 border border-primary-darkCyan md:rotate-90 md:h-6";
 
   return (
-    <div className="flex flex-col justify-center font-poppins">
+    <div className="flex flex-col justify-center p-2">
       <section className={sections}>
         <h1 className={twMerge(h1, "lg:text-3xl")}>Advanced Statistics</h1>
         <h2 className={h2}>

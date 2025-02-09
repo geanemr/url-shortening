@@ -9,11 +9,11 @@ import MenuMobile from "../../organisms/menu/menuMobile";
 import Statistics from "../../organisms/statistics/statistics";
 
 const DefaultTemplate = () => {
-  const { isMobile } = useScreenSize();
+  const { isWeb } = useScreenSize();
   return (
     <div>
-      <div className="flex flex-col md:p-10 text-center lg:mx-56">
-        {isMobile ? <MenuMobile /> : <MenuDesktop />}
+      <div className="flex flex-col mx-4 lg:mx-28 lg-desktop:mx-56 font-poppins">
+        {isWeb ? <MenuDesktop /> : <MenuMobile />}
         <HeroSection />
         <Form />
         <UrlsList />
