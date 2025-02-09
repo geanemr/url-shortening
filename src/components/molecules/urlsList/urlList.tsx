@@ -32,7 +32,7 @@ const UrlsList = () => {
                   </span>
                   <Button
                     variant="square-cyan"
-                    className={twMerge("w-full sm-tablet:w-fit min-w-20 h-10 md:min-w-28", copiedId === url.id && "bg-neutral-veryDarkBlue border-none")}
+                    className={twMerge("w-full sm-tablet:w-fit min-w-20 h-10 sm-tablet:min-w-28", copiedId === url.id && "bg-neutral-veryDarkBlue border-none")}
                     onClick={() => handleClick(url.id, url.shortenUrl)}
                     disabled={copiedId === url.id}
                   >
