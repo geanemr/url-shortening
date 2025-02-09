@@ -33,7 +33,8 @@ export default {
         "boostDesktop": "url('/bg-boost-desktop.svg')",
       },
       screens: {
-        'lg-desktop': '1500px',
+        "sm-tablet": "600px",
+        "lg-desktop": "1500px",
       },
     },
   },
