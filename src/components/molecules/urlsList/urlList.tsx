@@ -16,24 +16,23 @@ const UrlsList = () => {
   };
 
   return (
-    <section className="flex">
-      <ul className="flex flex-col w-full">
+      <ul className="flex flex-col w-full px-6">
         {sortedUrls.length > 0
           ? sortedUrls.map((url) => (
               <li
                 key={url.id}
-                className="flex items-center py-4 flex-col md:flex-row md:gap-6 md:px-10"
+                className="flex items-start text-start py-4 flex-col sm-tablet:flex-row sm-tablet:gap-6 font-medium"
               >
-                <span className="break-all text-neutral-veryDarkBlue text-lg font-medium">
+                <span className="break-all text-neutral-veryDarkBlue">
                   {url.originalUrl}
                 </span>
-                <div className="flex flex-col md:flex-row items-center md:ml-auto gap-2">
-                  <span className=" text-primary-cyan font-semibold break-all my-2">
+                <div className="w-full sm-tablet:w-auto items-start flex flex-col sm-tablet:flex-row sm-tablet:items-center sm-tablet:ml-auto gap-2 shrink-0">
+                  <span className=" text-primary-cyan break-all my-2">
                     {url.shortenUrl}
                   </span>
                   <Button
                     variant="square-cyan"
-                    className={twMerge("md:py-1 px-5 text-xs min-w-24 min-h-10 md:min-w-28", copiedId === url.id && "bg-neutral-veryDarkBlue border-none")}
+                    className={twMerge("w-full sm-tablet:w-fit min-w-20 h-10 md:min-w-28", copiedId === url.id && "bg-neutral-veryDarkBlue border-none")}
                     onClick={() => handleClick(url.id, url.shortenUrl)}
                     disabled={copiedId === url.id}
                   >
@@ -44,7 +43,6 @@ const UrlsList = () => {
             ))
           : null}
       </ul>
-    </section>
   );
 };
 
