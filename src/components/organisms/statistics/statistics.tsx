@@ -49,7 +49,7 @@ const Statistics: React.FC = () => {
             where people engage with your content helps inform better decisions.
           </h2>
         </section>
-        <span className={twMerge(dividers, "mx-0 lg:mx-6")}></span>
+        <span className={dividers}></span>
         <section className={twMerge(sections, "lg:mt-28")}>
           <div className={imageContainers}>
             <Image
