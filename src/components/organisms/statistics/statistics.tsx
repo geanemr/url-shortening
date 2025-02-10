@@ -3,25 +3,23 @@ import { Image } from "../../atoms/image/image";
 import { twMerge } from "tailwind-merge";
 
 const Statistics: React.FC = () => {
-  const h1 =
-    "text-xl font-bold text-neutral-veryDarkBlue my-4 break-all";
-  const h2 = "text-base lg:text-lg text-neutral-grayishViolet break-words font-medium text-base";
-  const images = "justify-self-center p-4";
-  const imageContainers = "rounded-full  bg-primary-darkViolet h-20 w-20";
-  const sections = "flex flex-col items-center justify-center";
-  const dividers =
-    "bg-primary-cyan h-12 w-2 border border-primary-darkCyan md:rotate-90 md:h-6";
+  const h1 = "text-xl font-bold text-neutral-veryDarkBlue my-4 break-all";
+  const h2 = "text-base lg:text-lg text-neutral-grayishViolet mb:break-all font-medium text-base text-center lg:text-start";
+  const images = "w-8 lg:w-7";
+  const imageContainers = "rounded-full items-center justify-center bg-primary-darkViolet p-4";
+  const sections = "flex flex-col items-center lg:items-start justify-center gap-2 lg:mx-4 mb-10 md:mb-0";
+  const dividers = "bg-primary-cyan h-10 w-2 border border-primary-darkCyan lg:rotate-90 lg:h-8 lg:w-6 mx-6";
 
   return (
-    <div className="flex flex-col justify-center p-2">
-      <section className={sections}>
+    <div className="flex flex-col justify-center p-2 md:mb-24">
+      <section className={twMerge(sections, "lg:items-center md:mb-4")}>
         <h1 className={twMerge(h1, "lg:text-3xl")}>Advanced Statistics</h1>
-        <h2 className={h2}>
+        <h2 className={twMerge(h2, "lg:text-center")}>
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </h2>
       </section>
-      <div className="flex flex-col md:flex-row gap-2 items-center py-4">
+      <div className="flex flex-col lg:flex-row items-center py-4">
         <section className={sections}>
           <div className={imageContainers}>
             <Image
@@ -37,7 +35,7 @@ const Statistics: React.FC = () => {
           </h2>
         </section>
         <span className={dividers}></span>
-        <section className={twMerge(sections, "md:mt-14")}>
+        <section className={twMerge(sections, "lg:mt-14")}>
           <div className={imageContainers}>
             <Image
               src="/icon-detailed-records.svg"
@@ -51,8 +49,8 @@ const Statistics: React.FC = () => {
             where people engage with your content helps inform better decisions.
           </h2>
         </section>
-        <span className={dividers}></span>
-        <section className={twMerge(sections, "md:mt-28")}>
+        <span className={twMerge(dividers, "mx-0 lg:mx-6")}></span>
+        <section className={twMerge(sections, "lg:mt-28")}>
           <div className={imageContainers}>
             <Image
               src="/icon-fully-customizable.svg"
