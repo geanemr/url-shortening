@@ -6,8 +6,8 @@ export interface ButtonProps
 }
 
 const variantClasses = {
-  gray: "text-neutral-grayishViolet hover:text-black py-2 px-4",
-  "rounded-cyan": "bg-primary-cyan text-white rounded-full py-4 px-8 lg:py-2 lg:px-4 text-lg lg:text-base border border-primary-darkCyan hover:bg-neutral-aquamarine",
+  gray: "text-white md:text-neutral-grayishViolet hover:text-neutral-grayishViolet md:hover:text-black py-2 px-4",
+  "rounded-cyan": "bg-primary-cyan text-white rounded-full py-3 px-8 text-sm lg:text-base border border-primary-darkCyan hover:bg-neutral-aquamarine",
   "square-cyan": "bg-primary-cyan text-white rounded py-2 px-4 text-sm lg:text-base border border-primary-darkCyan hover:bg-neutral-aquamarine",
 };
 
