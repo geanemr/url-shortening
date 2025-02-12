@@ -17,16 +17,16 @@ Essa é uma solução do [Desafio de encurtador de URLs do Frontend Mentor](http
 
 Os usuários devem ser capazes de:
 
-[x] Ver o layout otimizado do site dependendo do tamanho da tela do dispositivo  
-[x] Encurtar qualquer URL válida  
-[x] Ver uma lista dos seus links encurtados, mesmo depois de dar refresh no browser  
-[x] Copiar o link encurtado com apenas um click  
-[x] Receber uma mensagem de erro quando o `formulário` for submetido se:
+- [x] Ver o layout otimizado do site dependendo do tamanho da tela do dispositivo  
+- [x] Encurtar qualquer URL válida  
+- [x] Ver uma lista dos seus links encurtados, mesmo depois de dar refresh no browser  
+- [x] Copiar o link encurtado com apenas um click  
+- [x] Receber uma mensagem de erro quando o `formulário` for submetido se:
   - A área de  `input` estiver vazia
 
 ### Links
 
-<!-- - URL da solução: Click [aqui](https://url-shortening-seven-ashy.vercel.app/) -->
+- URL da solução: Click [aqui](https://www.frontendmentor.io/solutions/frontend-mentor---shortly---url-shortening-api-challenge-solution-oehgnzpSLi)
 - URL do site: Clique [aqui](https://url-shortening-seven-ashy.vercel.app/)
 
 ## Meu Processo

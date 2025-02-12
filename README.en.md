@@ -17,16 +17,16 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 Users should be able to:
 
-[x] View the optimal layout for the site depending on their device's screen size  
-[x] Shorten any valid URL  
-[x] See a list of their shortened links, even after refreshing the browser  
-[x] Copy the shortened link to their clipboard in a single click  
-[x] Receive an error message when the `form` is submitted if:
+- [x] View the optimal layout for the site depending on their device's screen size  
+- [x] Shorten any valid URL  
+- [x] See a list of their shortened links, even after refreshing the browser  
+- [x] Copy the shortened link to their clipboard in a single click  
+- [x] Receive an error message when the `form` is submitted if:
   - The `input` field is empty
 
 ### Links
 
-<!-- - Solution URL: Click [here](https://url-shortening-seven-ashy.vercel.app/) -->
+- Solution URL: Click [here](https://www.frontendmentor.io/solutions/frontend-mentor---shortly---url-shortening-api-challenge-solution-oehgnzpSLi)
 - Live Site URL: Clicl [here](https://url-shortening-seven-ashy.vercel.app/)
 
 ## My process
