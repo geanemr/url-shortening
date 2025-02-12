@@ -26,7 +26,7 @@ Os usuários devem ser capazes de:
 
 ### Links
 
-<!-- - URL da solução: Click [aqui](https://url-shortening-seven-ashy.vercel.app/) -->
+- URL da solução: Click [aqui](https://www.frontendmentor.io/solutions/frontend-mentor---shortly---url-shortening-api-challenge-solution-oehgnzpSLi)
 - URL do site: Clique [aqui](https://url-shortening-seven-ashy.vercel.app/)
 
 ## Meu Processo
