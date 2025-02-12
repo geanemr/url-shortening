@@ -17,11 +17,11 @@ Essa é uma solução do [Desafio de encurtador de URLs do Frontend Mentor](http
 
 Os usuários devem ser capazes de:
 
-[x] Ver o layout otimizado do site dependendo do tamanho da tela do dispositivo  
-[x] Encurtar qualquer URL válida  
-[x] Ver uma lista dos seus links encurtados, mesmo depois de dar refresh no browser  
-[x] Copiar o link encurtado com apenas um click  
-[x] Receber uma mensagem de erro quando o `formulário` for submetido se:
+- [x] Ver o layout otimizado do site dependendo do tamanho da tela do dispositivo  
+- [x] Encurtar qualquer URL válida  
+- [x] Ver uma lista dos seus links encurtados, mesmo depois de dar refresh no browser  
+- [x] Copiar o link encurtado com apenas um click  
+- [x] Receber uma mensagem de erro quando o `formulário` for submetido se:
   - A área de  `input` estiver vazia
 
 ### Links
