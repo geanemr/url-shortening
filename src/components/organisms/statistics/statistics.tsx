@@ -13,8 +13,8 @@ const Statistics: React.FC = () => {
   return (
     <div className="flex flex-col justify-center p-2 md:mb-24">
       <section className={twMerge(sections, "lg:items-center md:mb-4")}>
-        <h1 className={twMerge(h1, "lg:text-3xl")}>Advanced Statistics</h1>
-        <h2 className={twMerge(h2, "lg:text-center")}>
+        <h1 className={twMerge(h1, "lg:text-4xl")}>Advanced Statistics</h1>
+        <h2 className={twMerge(h2, "lg:text-center lg:max-w-lg")}>
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </h2>
