@@ -27,7 +27,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: Click [here](https://www.frontendmentor.io/solutions/frontend-mentor---shortly---url-shortening-api-challenge-solution-oehgnzpSLi)
-- Live Site URL: Clicl [here](https://url-shortening-seven-ashy.vercel.app/)
+- Live Site URL: Click [here](https://url-shortening-seven-ashy.vercel.app/)
 
 ## My process
 
