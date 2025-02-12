@@ -20,7 +20,7 @@ const Statistics: React.FC = () => {
         </h2>
       </section>
       <div className="flex flex-col lg:flex-row items-center py-4">
-      <section className={twMerge(sections, "lg:mb-20")}>
+      <section className={sections}>
           <div className={imageContainers}>
             <Image
               src="/icon-brand-recognition.svg"
@@ -35,7 +35,7 @@ const Statistics: React.FC = () => {
           </h2>
         </section>
         <span className={dividers}></span>
-        <section className={sections}>
+        <section className={twMerge(sections, "lg:mt-20")}>
           <div className={imageContainers}>
             <Image
               src="/icon-detailed-records.svg"
@@ -50,7 +50,7 @@ const Statistics: React.FC = () => {
           </h2>
         </section>
         <span className={dividers}></span>
-        <section className={twMerge(sections, "lg:mt-20")}>
+        <section className={twMerge(sections, "lg:mt-40")}>
           <div className={imageContainers}>
             <Image
               src="/icon-fully-customizable.svg"
