@@ -15,15 +15,20 @@ export const useFetch = (): useFetchInterface => {
 
   const fetchShortenUrl = async () => {
     try {
-      const response = await fetch("https://cleanuri.com/api/v1/shorten", {
+      const response = await fetch("https://api.tinyurl.com/create", {
         method: "POST",
         headers: {
+          Authorization: `Bearer ${process.env.TINYURL_API_KEY}`,
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ url: url }),
+        body: JSON.stringify({
+          url,
+          domain: "tinyurl.com",
+        }),
       });
+
       const json = await response.json();
-      setShortenUrl(json.result_url);
+      setShortenUrl(json.data.tiny_url);
       setError("");
     } catch (error: unknown) {
       if (error instanceof Error) {
