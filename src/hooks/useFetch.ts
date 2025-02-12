@@ -18,7 +18,7 @@ export const useFetch = (): useFetchInterface => {
       const response = await fetch("https://api.tinyurl.com/create", {
         method: "POST",
         headers: {
-          Authorization: `Bearer ${process.env.TINYURL_API_KEY}`,
+          Authorization: `Bearer ${import.meta.env.VITE_TINYURL_API_KEY}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
