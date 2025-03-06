@@ -3,7 +3,7 @@ import { Image } from "../../atoms/image/image";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col md:flex-row-reverse lg:gap-1 justify-center my-2 p-6 lg-desktop:p-0 items-center mb-4 lg:mb-8">
+    <main className="flex flex-col md:flex-row-reverse lg:gap-1 justify-center my-2 p-6 lg-desktop:p-0 items-center mb-4 lg:mb-8">
       <section className="flex flex-1 justify-center lg-desktop:justify-end">
         <Image src="/illustration-working.svg" alt="Illustration of a person working at a desk" className="m-2 mb:m-0" />
       </section>
@@ -15,7 +15,7 @@ const HeroSection = () => {
         </h2>
         <Button variant="rounded-cyan">Get Started</Button>
       </section>
-    </div>
+    </main>
   );
 };
 
