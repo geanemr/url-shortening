@@ -10,11 +10,9 @@ const InfoButtons: React.FC = () => {
       {isWeb ? (
         <Image src="/logo.svg" alt="Shortly's logo" className="w-35" />
       ) : null}
-      <nav>
       <Button>Features</Button>
       <Button>Pricing</Button>
       <Button>Resources</Button>
-      </nav>
     </header>
   );
 };
