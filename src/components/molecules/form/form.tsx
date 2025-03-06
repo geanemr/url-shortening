@@ -10,7 +10,7 @@ const Form = () => {
   const { addUrl } = useUrlStore();
   const [emptyLink, setEmptyLink] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (url) {
       setEmptyLink(false);
@@ -19,7 +19,7 @@ const Form = () => {
       setEmptyLink(true);
       return;
     }
-    fetchShortenUrl();
+    await fetchShortenUrl();
     if (!shortenUrl) return;
 
     addUrl(url, shortenUrl);

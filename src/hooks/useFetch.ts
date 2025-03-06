@@ -3,8 +3,9 @@ import { Dispatch, SetStateAction, useState } from "react";
 interface useFetchInterface {
   url: string;
   setUrl: Dispatch<SetStateAction<string>>;
-  fetchShortenUrl: () => void;
+  fetchShortenUrl: () => Promise<string>;
   error: string;
+  setError: Dispatch<SetStateAction<string>>;
   shortenUrl: string;
 }
 
@@ -13,7 +14,7 @@ export const useFetch = (): useFetchInterface => {
   const [shortenUrl, setShortenUrl] = useState("");
   const [error, setError] = useState("");
 
-  const fetchShortenUrl = async () => {
+  const fetchShortenUrl = async (): Promise<string> => {
     try {
       const response = await fetch("https://api.tinyurl.com/create", {
         method: "POST",
@@ -28,14 +29,17 @@ export const useFetch = (): useFetchInterface => {
       });
 
       const json = await response.json();
-      setShortenUrl(json.data.tiny_url);
+      const shortenedUrl = json.data.tiny_url;
+      setShortenUrl(shortenedUrl);
       setError("");
+      return shortenedUrl;
     } catch (error: unknown) {
       if (error instanceof Error) {
         setError(error.message || "An error occurred");
       } else {
         setError("An error occurred");
       }
+      return "";
     }
   };
 
@@ -44,6 +48,7 @@ export const useFetch = (): useFetchInterface => {
     setUrl,
     fetchShortenUrl,
     error,
+    setError,
     shortenUrl,
   };
 };
