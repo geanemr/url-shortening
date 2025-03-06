@@ -9,7 +9,7 @@ const HeroSection = () => {
       </section>
       <section className="flex flex-1 flex-col justify-center items-center md:items-start lg:text-left font-poppins">
         <h1 className="text-4xl md:text-6xl lg:text-7xl text-center md:text-start font-bold text-neutral-veryDarkBlue mb-2">More than just shorter links</h1>
-        <h2 className="text-base lg:text-lg text-center md:text-start text-neutral-grayishViolet mb-8 max-w-lg">
+        <h2 className="text-base lg:text-xl text-center md:text-start text-neutral-grayishViolet mb-8 max-w-lg font-semibold">
           Build your brand's recognition and get detailed insights on how your
           links are performing.
         </h2>
