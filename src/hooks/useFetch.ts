@@ -6,12 +6,10 @@ interface useFetchInterface {
   fetchShortenUrl: () => Promise<string>;
   error: string;
   setError: Dispatch<SetStateAction<string>>;
-  shortenUrl: string;
 }
 
 export const useFetch = (): useFetchInterface => {
   const [url, setUrl] = useState("");
-  const [shortenUrl, setShortenUrl] = useState("");
   const [error, setError] = useState("");
 
   const fetchShortenUrl = async (): Promise<string> => {
@@ -30,7 +28,6 @@ export const useFetch = (): useFetchInterface => {
 
       const json = await response.json();
       const shortenedUrl = json.data.tiny_url;
-      setShortenUrl(shortenedUrl);
       setError("");
       return shortenedUrl;
     } catch (error: unknown) {
@@ -49,6 +46,5 @@ export const useFetch = (): useFetchInterface => {
     fetchShortenUrl,
     error,
     setError,
-    shortenUrl,
   };
 };

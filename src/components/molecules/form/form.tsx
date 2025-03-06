@@ -6,7 +6,7 @@ import { useUrlStore } from "../../../stores/urlStore";
 import { twMerge } from "tailwind-merge";
 
 const Form = () => {
-  const { fetchShortenUrl, url, setUrl, shortenUrl, error } = useFetch();
+  const { fetchShortenUrl, url, setUrl, error, setError } = useFetch();
   const { addUrl } = useUrlStore();
   const [emptyLink, setEmptyLink] = useState(false);
 
@@ -19,10 +19,15 @@ const Form = () => {
       setEmptyLink(true);
       return;
     }
-    await fetchShortenUrl();
-    if (!shortenUrl) return;
 
-    addUrl(url, shortenUrl);
+    const shortenUrl = await fetchShortenUrl();
+
+    if(shortenUrl) {
+      addUrl(url, shortenUrl);
+    }
+    if(!shortenUrl) {
+      setError("No URL returned")
+    }
 
     setUrl("");
   };
