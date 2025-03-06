@@ -6,14 +6,16 @@ import useScreenSize from "../../../hooks/useScreenSize";
 const InfoButtons: React.FC = () => {
   const { isWeb } = useScreenSize();
   return (
-    <section className="flex flex-col md:flex-row items-center">
+    <header className="flex flex-col md:flex-row items-center">
       {isWeb ? (
         <Image src="/logo.svg" alt="Shortly's logo" className="w-35" />
       ) : null}
+      <nav>
       <Button>Features</Button>
       <Button>Pricing</Button>
       <Button>Resources</Button>
-    </section>
+      </nav>
+    </header>
   );
 };
 

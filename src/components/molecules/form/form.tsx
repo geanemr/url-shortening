@@ -10,7 +10,7 @@ const Form = () => {
   const { addUrl } = useUrlStore();
   const [emptyLink, setEmptyLink] = useState(false);
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (url) {
       setEmptyLink(false);
@@ -19,7 +19,7 @@ const Form = () => {
       setEmptyLink(true);
       return;
     }
-    fetchShortenUrl();
+    await fetchShortenUrl();
     if (!shortenUrl) return;
 
     addUrl(url, shortenUrl);
@@ -31,13 +31,13 @@ const Form = () => {
     <>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col relative m-2 lg:m-0 p-8 lg:p-12 bg-no-repeat bg-right-top bg-primary-darkViolet bg-inputMobile lg:bg-inputDesktop rounded-md mb-6 lg:mb-20 mt-2"
+        className="flex flex-col relative m-2 lg:m-0 p-8 lg:p-12 bg-no-repeat bg-right-top bg-primary-darkViolet bg-inputMobile lg:bg-inputDesktop rounded-md mb-6 lg:mb-20 mt-4"
       >
         <div className="flex flex-wrap items-center gap-4 justify-center">
           <Input
             placeholder="Shorten a link here..."
             className={twMerge(
-              "w-full md:w-auto truncate flex-grow p-3",
+              "w-full md:w-auto truncate flex-grow p-3 lg:p-4",
               emptyLink && "border-2 border-secondary-red"
             )}
             value={url}
@@ -48,7 +48,7 @@ const Form = () => {
           />
           <Button
             variant="square-cyan"
-            className="w-full md:w-auto truncate lg:break-normal flex-grow lg:flex-grow-0 p-3 lg:px-10"
+            className="w-full md:w-auto truncate lg:break-normal flex-grow lg:flex-grow-0 p-3 lg:p-4 lg:px-10"
           >
             Shorten It!
           </Button>
